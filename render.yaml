@@ -17,7 +17,7 @@ services:
         value: 3.12.0
       - key: DATABASE_URL
         fromDatabase:
-          name: imgage-db
+          name: imaage-db
           property: connectionString
       - key: IMAGEKIT_PRIVATE_KEY
         value: private_8TuDA30QbhZXETbiBzqREyaPLsk=
