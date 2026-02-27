@@ -1,5 +1,6 @@
 from collections.abc import AsyncGenerator
 import uuid
+import os
 
 from sqlalchemy import Column, String, Text, DateTime, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
@@ -9,8 +10,7 @@ from datetime import datetime
 from fastapi import Depends
 from fastapi_users.db import SQLAlchemyUserDatabase, SQLAlchemyBaseUserTableUUID
 
-
-DATABASE_URL = "sqlite+aiosqlite:///./test.db"
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./test.db")
 
 class Base(DeclarativeBase):
     pass
