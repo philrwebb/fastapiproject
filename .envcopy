@@ -1,0 +1,3 @@
+IMAGEKIT_PRIVATE_KEY=your imagekit private key
+IMAGEKIT_PUBLIC_KEY=your imagekit public key
+IMAGEKIT_URL=https://ik.imagekit.io/your_imagekit_id

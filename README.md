@@ -12,10 +12,10 @@ This repository has all that is necessary. If you want to run it on local server
 git clone https://github.com/philrwebb/fastapiproject.git
 ```
 
-Then change into the project folder and:
+To update the project dependencies, change into the project folder and:
 
 ```sh
-uv run main.py
+uv sync
 ```
 
 This above assumes you have uv (a rust based package manager for python available) - you can install via
@@ -28,7 +28,7 @@ Once you go to uv I guarantee you will never go back to pip.
 
 Following download to development you can run the app with:
 
-```
+```sh
 uv run main.py
 ```
 
@@ -36,4 +36,10 @@ Because it is written with the FastAPI library it support a docs url that allows
 
 http://localhost:8000/docs
 
-First run against this will set up and run the database creation (sqlite in dev) and create the users and posts tables.
+First run against this will also set up and run the database creation (sqlite in dev) and create the users and posts tables.
+
+The code also includes frontend.py script in the project root. In another shell you can execute this with:
+
+```sh
+uv run streamlit run frontend.py
+```
